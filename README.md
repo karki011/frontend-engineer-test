@@ -42,6 +42,8 @@ Please complete the following steps in order.
    2) The search should match against ANY column of the table. To use the previous example, the string 'mpu' would  match 'Compute' in the Resource Type column and 'Accelerated Computing' in the Purpose column.
    3) Please try to make the search experience as pleasant for the user as possible while working within the time constraint. Perhaps the user doesn't want to see the table refreshing on every keystroke, or they might want to see a count of matched rows, or their search terms highlighted in the result. Again, use your best judgment, we don’t expect you to get to everything.
 
+3) The user needs to be able to share links to the page that include the search value. When loaded, these urls prepopulate the field and filter the table listing.
+
 
 ## Using Typescript
 We have provided you with a Typescript project because that is what we use a CloudZero. But please know **we are not evaluating your knowledge of Typescript**,
