@@ -10,8 +10,8 @@ type Props = {
 }
 const ProductTable: FunctionComponent<Props> = ({rows, cols}) => {
   return (
-    <div className="product-table table-container">
-      <table className="table is-striped is-hoverable">
+    <div>
+      <table>
         <thead>
           <tr>
             {cols.map(col => (

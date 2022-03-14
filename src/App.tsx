@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1 className="title is-1">CloudZero Resource Advisor</h1>
+        <h1>CloudZero Resource Advisor</h1>
       </header>
       <main>
         <Search />
