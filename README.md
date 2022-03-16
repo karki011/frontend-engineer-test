@@ -13,7 +13,7 @@ This test repository has been provided to you with a sample application, and you
 4) When ready, submit your code to us by adding a CloudZero user to your forked repository.
 
 ## About the CloudZero Resource Advisor
-The CloudZero Resource advisor is a real application inside our platform. It is designed to provide customers with basic pricing  information around AWS EC2 products. For this test, you will help add some basic features to the sample application that can display and filter this product information from a live web API endpoint.
+The CloudZero Resource advisor is a real application inside our platform. It is designed to provide customers with basic pricing information around AWS EC2 products. For this test, you will help add some basic features to the sample application that can display and filter this product information from a live web API endpoint.
 
 ## Criteria
 
@@ -28,8 +28,9 @@ We want you to draw on your own experience and judgment when implementing these 
 1) All code submitted must be written in Javascript or Typescript
 2) You must use React as the app's component library.
 
+
 ## Instructions
-Please complete the following steps in order.
+Please complete the following steps in order. As you are working through this test, we expect you to make tradeoffs given the time constraints. Please leave brief comments to explain your thinking and how you would do this differently if time weren't a constraint.
 
 1) Currently, the product table is receiving all of its data from a JSON file called `sample-data.json`.
    We would like to load this data from a mock API instead. Please execute the `npm run serve` command in your terminal to start the mock server and then implement a mechanism to send a GET request to: `http://localhost:8080/resources`.
@@ -43,8 +44,6 @@ Please complete the following steps in order.
    1) The solution should support partial matching for any piece of text in the table. For example, if I enter the string 'mpu', it should match the word 'Compute'.
    2) The search should match against ANY column of the table. To use the previous example, the string 'mpu' would  match 'Compute' in the Resource Type column and 'Accelerated Computing' in the Purpose column.
    3) Please try to make the search experience as pleasant for the user as possible while working within the time constraint. Perhaps the user doesn't want to see the table refreshing on every keystroke, or they might want to see a count of matched rows, or their search terms highlighted in the result. Again, use your best judgment, we don’t expect you to get to everything.
-
-4) The user needs to be able to share links to the page that include the search value. When loaded, these urls prepopulate the field and filter the table listing.
 
 
 ## Using Typescript
