@@ -55,7 +55,7 @@ function App() {
     updateCssVariable(rawProducts.columns.length)
   }, [rawProducts.columns.length])
 
-  // clear how hooks are scaling well from a maintenance perspective with intermediate
+  // clear how hooks are not scaling well from a maintenance perspective with intermediate
   // data structures, perhaps some other state solution or refactoring this state would be best.
   useEffect(() => {
     setHashedProducts(rawProducts.data.map(p => [JSON.stringify(p).toLowerCase(), p]))
