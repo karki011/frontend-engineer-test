@@ -5,6 +5,11 @@
 :root {
   --number-of-columns: 1;
 }
+
+/*
+ * Given more time, I would try to restructure the layout and dom to avoid the
+ * dual scroll boxes between the table and the page
+ */
 .product-table {
   max-height: 800px;
   overflow: auto;

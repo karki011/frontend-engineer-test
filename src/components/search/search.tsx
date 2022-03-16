@@ -10,7 +10,7 @@ const Search: FunctionComponent<ParentProps> = (props) => {
   const { onChange } = props
   return (
     <div className="search">
-      <input placeholder="Search for resources here" onChange={(e) => onChange(e.target.value)} />
+      <input className="search__input" placeholder="Search for resources here" onChange={(e) => onChange(e.target.value)} />
     </div>
   )
 }
