@@ -22,7 +22,6 @@ The sample application provides you with the following:
 1) A Typescript project (see notes about Typescript below).
 2) A `create-react-app` application using React 17 (see below for details).
 3) Stubbed files and components for completing the work.
-4) [Bulma CSS](https://bulma.io/documentation/) for very simple page styles.
 
 We want you to draw on your own experience and judgment when implementing these features. Please feel free to add libraries or change things as you see fit. We only have 2 technical requirements for your solution:
 
@@ -36,6 +35,9 @@ Please complete the following steps in order.
    We would like to load this data from a mock API instead. Please execute the `npm run serve` command in your terminal to start the mock server and then implement a mechanism to send a GET request to: `http://localhost:8080/resources`.
    1) Consider using the (currently empty) `src/api` module to implement this logic.
 
+2) The page could use styling to improve the UX.
+   1) Please give every other row a variation in color.
+   2) Hovering on a row should highlight it a bit.
 
 2) It would be really nice if a user could filter the rows of the table based on some search criteria. Please add a search field above the table that will filter rows based on text input from the user.
    1) The solution should support partial matching for any piece of text in the table. For example, if I enter the string 'mpu', it should match the word 'Compute'.
@@ -46,13 +48,12 @@ Please complete the following steps in order.
 
 
 ## Using Typescript
-We have provided you with a Typescript project because that is what we use a CloudZero. But please know **we are not evaluating your knowledge of Typescript**,
+We have provided you with a Typescript project because that is what we use at CloudZero. But please know **we are not evaluating your knowledge of Typescript**,
 and writing typed Javascript is completely optional.
 - You should be able to write plain Javascript inside `.ts` files, without needing to specify types.
 - If you are creating React components, be sure to use the `.tsx` extension on files that contain JSX code
 - We have provided some useful typings around the API data in `types.ts` -- this should be helpful in providing some autocompletion for data objects
 - If you do prefer to work with Typescript, you may consider re-enabling the `strict` compiler flag in `tsconfig.json`
-
 
 
 # Getting Started with Create React App
