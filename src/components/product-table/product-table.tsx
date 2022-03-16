@@ -11,7 +11,7 @@ type Props = {
 const ProductTable: FunctionComponent<Props> = ({rows, cols}) => {
   return (
     <div className="product-table table-container">
-      <table className="table">
+      <table className="table table--striped-rows table--hover-rows">
         <thead>
           <tr>
             {cols.map(col => (
