@@ -3,10 +3,14 @@
 import React, { FunctionComponent } from 'react'
 import "./search.css"
 
-const Search: FunctionComponent = () => {
+type ParentProps = {
+  onChange: (v: string) => void
+}
+const Search: FunctionComponent<ParentProps> = (props) => {
+  const { onChange } = props
   return (
     <div className="search">
-      <p>Search Goes Here</p>
+      <input placeholder="Search for resources here" onChange={(e) => onChange(e.target.value)} />
     </div>
   )
 }

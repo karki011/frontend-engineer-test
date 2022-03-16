@@ -2,13 +2,18 @@
    Copyright (c) 2016-present, CloudZero, Inc. All rights reserved.
    Licensed under the BSD-style license. See LICENSE file in the project root for full license information.
 */
+:root {
+  --number-of-columns: 1;
+}
 .product-table {
   max-height: 800px;
   overflow: auto;
+  width: 100%;
 }
 
 .product-table table {
   position: relative;
+  width: 100%;
 }
 
 .product-table th {
@@ -16,6 +21,7 @@
   position: sticky;
   top: 0;
   background-color: #fff;
+  width: calc(100% / var(--number-of-columns)); /* hack to make the rows even */
 }
 .product-table td {
   font-size: 14px;
