@@ -3,12 +3,23 @@
    Licensed under the BSD-style license. See LICENSE file in the project root for full license information.
 */
 .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    margin: 32px 0;
-    max-width: 40%;
-    background-color: #f2f2f2;
-    border: 4px #666 dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin: 32px 0;
+  max-width: 40%;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.search p {
+  padding-right: 10px;
+}
+
+.search input {
+  width: 100%;
+  padding: 5px;
+  border: solid 1px #d5cccc;
+  outline: none;
 }

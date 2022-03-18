@@ -3,20 +3,29 @@
    Licensed under the BSD-style license. See LICENSE file in the project root for full license information.
 */
 .product-table {
-    max-height: 800px;
-    overflow: auto;
+  max-height: 800px;
+  overflow: auto;
 }
 
 .product-table table {
-    position: relative;
+  position: relative;
 }
 
 .product-table th {
-    font-size: 14px;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
+
+.product-table .one {
+  background-color: #d1d5dd;
+}
+
+.product-table tr:hover {
+  background-color: #cecdcd;
+}
+
 .product-table td {
-    font-size: 14px;
+  font-size: 14px;
 }
