@@ -1,11 +1,13 @@
 import { createContext, Dispatch, useContext, useReducer } from "react";
 
+// settingState type and initialize.
 type SettingStateType = {
   search: string;
 };
 const initSettingState = {
   search: "",
 };
+// setting context type and initialize
 type SettingContextType = {
   settingState: SettingStateType;
   dispatch: Dispatch<any>;
@@ -15,6 +17,7 @@ const initialState = {
   dispatch: () => null,
 };
 
+// reducer of context
 function settingReducer(state, action) {
   switch (action.type) {
     case "SET": {
@@ -25,16 +28,16 @@ function settingReducer(state, action) {
     }
   }
 }
-
+// context
 const SettingContext = createContext<SettingContextType>(initialState);
-
+// context provider
 export const SettingProvider = (props) => {
   const [settingState, dispatch] = useReducer(settingReducer, initSettingState);
   return (
     <SettingContext.Provider value={{ settingState, dispatch }} {...props} />
   );
 };
-
+// custom hook of context
 export const useSetting = () => {
   const context = useContext(SettingContext);
   if (!context) {

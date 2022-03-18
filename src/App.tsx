@@ -3,10 +3,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { ProductTable, Search } from "./components";
-import { get as getResource } from "./api/index";
+import { get as getResource } from "./api/index"; // side effect to get data from backend
 import { ProductApiResponse } from "./types";
 import { useSetting } from "./provide/setting";
 
+/**
+ *  check if the string contrains filter string after lowercase.
+ * */
 const _includes = (str, filter) => {
   return str.toLowerCase().includes(filter.toLowerCase());
 };
@@ -15,20 +18,22 @@ function App() {
   const [resource, setResource] = useState<ProductApiResponse>({
     columns: [],
     data: [],
-  });
+  }); // all data from backend
   const [products, setProducts] = useState<ProductApiResponse>({
     columns: [],
     data: [],
-  });
+  }); // data in the product table
 
+  // initial to get all data from backend
   useEffect(() => {
     getResource().then((res) => {
       setResource(res);
       setProducts(res);
     });
   }, []);
+  // call when the search text is changed
   useEffect(() => {
-    console.log(settingState.search);
+    // if search text is not empty, filter the resource using search text to get product data.
     if (settingState.search && settingState.search !== "") {
       const res = resource.data.filter((item) => {
         let filter = false;
@@ -73,7 +78,7 @@ function App() {
           filter = true;
         return filter;
       });
-      setProducts({ ...products, data: res });
+      setProducts({ ...products, data: res }); // update product.data using the result of filtering
     }
   }, [settingState.search]);
   return (

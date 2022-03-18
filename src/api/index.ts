@@ -2,6 +2,7 @@
 // Licensed under the BSD-style license. See LICENSE file in the project root for full license information.
 const API_URL = "http://localhost:8080/resources";
 
+/** get result of api with url, method, headers, body using javascript fetch function */
 function api(url, method, headers = {}, body = null) {
   try {
     return fetch(url, {
@@ -25,6 +26,7 @@ function api(url, method, headers = {}, body = null) {
   }
 }
 
+/** get result using api with method "GET" in the restful api */
 async function apiGet(url) {
   try {
     const res = await api(url, "GET");
@@ -34,12 +36,13 @@ async function apiGet(url) {
   }
 }
 
+/** get result for resource from backend for data */
 async function get() {
   try {
     let res = await apiGet(API_URL);
-    return Promise.resolve(res);
+    return Promise.resolve(res); // return result. .then(res => { })
   } catch (error) {
-    return Promise.reject(error);
+    return Promise.reject(error); // return error. .catch(res => { })
   }
 }
 

@@ -6,15 +6,16 @@ import { useSetting } from "../../provide/setting";
 
 const Search: FunctionComponent = () => {
   const { dispatch } = useSetting();
-  const [text, setText] = useState<string>("");
+  const [text, setText] = useState<string>(""); // the search text value
 
+  // call when the search text is changed
   const handleChangeText = (e) => {
     setText(e.target.value);
     dispatch({
       type: "SET",
       settingName: "search",
       settingData: e.target.value,
-    });
+    }); // set global search text using useContext.
   };
 
   return (
